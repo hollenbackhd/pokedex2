@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">pokedex2</string>
+    <string name="bulbasaur">Bulbasaur:</string>
+    <string name="charmander">Charmander:</string>
+    <string name="squirtle">Squirtle:</string>
+    <string name="chikorita">Chikorita:</string>
+    <string name="cyndaquil">Cyndaquil:</string>
+    <string name="totodile">Totodile:</string>
+    <string name="treecko">Treecko:</string>
+    <string name="torchic">Torchic:</string>
+    <string name="mudkip">Mudkip:</string>
+    <string name="turtwig">Turtwig:</string>
+    <string name="chimchar">Chimchar:</string>
+    <string name="piplub">Piplub:</string>
+    <string name="rowlet">Rowlet:</string>
+    <string name="litten">Litten:</string>
+    <string name="popplio">Popplio:</string>
+    <string name="snivy">Snivy:</string>
+    <string name="tepig">Tepig:</string>
+    <string name="oshawott">Oshawott:</string>
+    <string name="chespin">Chespin:</string>
+    <string name="fennekin">Fennekin:</string>
+    <string name="froakie">Froakie:</string>
+    <string name="grookey">Grookey:</string>
+    <string name="scorbunny">Scorbunny:</string>
+    <string name="sobble">Sobble:</string>
+</resources>
