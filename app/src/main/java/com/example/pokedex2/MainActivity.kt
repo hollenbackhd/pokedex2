@@ -1,4 +1,5 @@
 package com.example.pokedex2
 
-class MainActivity {
-}
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity(R.layout.activity_main)

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".StartFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/pokemonSil3"
+            android:layout_width="220dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.23"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.346"
+            app:srcCompat="@drawable/bulbasaur_silpic" />
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="154dp"
+            android:layout_height="82dp"
+            android:text="start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.913" />
+
+        <TextView
+            android:id="@+id/guess3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Who's that Pokemon?"
+            android:textSize="34sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.166" />
+
+        <ImageView
+            android:id="@+id/border3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/pokedex_pic"
+            tools:layout_editor_absoluteX="-89dp"
+            tools:layout_editor_absoluteY="-106dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="224dp"
+            android:layout_height="243dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.812"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.696"
+            app:srcCompat="@drawable/bulbasaur_pic" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
