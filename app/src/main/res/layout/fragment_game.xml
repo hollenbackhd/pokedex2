@@ -8,29 +8,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/option1"
-        android:layout_width="154dp"
-        android:layout_height="82dp"
-        android:text="bulbasaur"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
+        <Button
+            android:id="@+id/option1"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:text="bulbasaur"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.828"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.936" />
 
-    <Button
-        android:id="@+id/option2"
-        android:layout_width="154dp"
-        android:layout_height="82dp"
-        android:text="turtwig"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.828"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        <Button
+            android:id="@+id/option2"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:text="turtwig"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.828"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.733" />
 
     <ImageView
         android:id="@+id/pokemonSil"
@@ -44,17 +44,17 @@
         app:layout_constraintVertical_bias="0.372"
         app:srcCompat="@drawable/bulbasaur_silpic" />
 
-    <Button
-        android:id="@+id/option3"
-        android:layout_width="154dp"
-        android:layout_height="82dp"
-        android:text="mudkip"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.733" />
+        <Button
+            android:id="@+id/option3"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:text="mudkip"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.733" />
 
     <TextView
         android:id="@+id/guess"
@@ -68,17 +68,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.151" />
 
-    <Button
-        android:id="@+id/option4"
-        android:layout_width="154dp"
-        android:layout_height="82dp"
-        android:text="sobble"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.202"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.936" />
+        <Button
+            android:id="@+id/option4"
+            android:layout_width="150dp"
+            android:layout_height="80dp"
+            android:text="sobble"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.202"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.936" />
 
     <TextView
         android:id="@+id/score"
@@ -113,5 +113,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.119" />
+
+        <Button
+            android:id="@+id/back_to_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back"
+            app:layout_constraintBottom_toBottomOf="@+id/border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.023" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
