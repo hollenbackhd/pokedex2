@@ -5,10 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.example.pokedex2.databinding.FragmentGameBinding
 import androidx.navigation.fragment.findNavController
 
 class GameFragment : Fragment() {
+
     private var binding: FragmentGameBinding? = null
 
     override fun onCreateView(
@@ -31,6 +33,7 @@ class GameFragment : Fragment() {
     fun goToStart(){
         findNavController().navigate(R.id.action_gameFragment_to_startFragment2)
     }
+
 
     /**
      * Start an order with the desired quantity of cupcakes and navigate to the next screen.
