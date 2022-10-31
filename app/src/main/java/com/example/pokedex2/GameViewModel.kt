@@ -27,7 +27,7 @@ class GameViewModel : ViewModel() {
         Log.d("GameFragment", "GameViewModel created!")
         getNextPokemon()
     }
-    public fun getNextPokemon() {
+    public fun getNextPokemon(){
         currentPokemon = allPokemonList.random()
 
         if (pokemonList.contains(currentPokemon)) {
