@@ -9,9 +9,10 @@ import android.widget.Button
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.pokedex2.databinding.FragmentGameBinding
 import androidx.navigation.fragment.findNavController
+import com.example.pokedex2.databinding.FragmentGameBinding
 import com.example.pokedex2.ui.game.allPokemonList
+import android.content.Context as Context1
 
 class GameFragment : Fragment() {
 
@@ -26,6 +27,7 @@ class GameFragment : Fragment() {
     private var pokemon4 = "test"
     private var correctPokemon = "nothing"
     private var imageSil = "_silpic"
+    private var resource = "R.id."
 
 
 
@@ -59,7 +61,9 @@ class GameFragment : Fragment() {
         btn2.text = pokemon2
         btn3.text = pokemon3
         btn4.text = pokemon4
-        //correctPokemon = getCorrectPokemon()
+        correctPokemon = getCorrectPokemon()
+        val resourceId = resources.getIdentifier(correctPokemon+imageSil, "drawable", BuildConfig.APPLICATION_ID)
+        pokemonImage.setImageResource(resourceId)
 
 
 
@@ -83,15 +87,25 @@ class GameFragment : Fragment() {
         pokemon3 = getNextPokemon()
         pokemon4 = getNextPokemon()
     }
-    private fun getCorrectPokemon(){
+    private fun getCorrectPokemon(): String{
         val rand = (1..4).random()
-        val correct = when (rand) {
-            1 -> pokemon1 + imageSil
-            2 -> pokemon2 + imageSil
-            3 -> pokemon3 + imageSil
-            else -> pokemon4 + imageSil
+        var correct = "test"
+        val drawableResource  = when (rand) {
+            1 -> pokemon1
+            2 -> pokemon2
+            3 -> pokemon3
+            else -> pokemon4
         }
+        Log.d("GameFragment",(correct))
+        return  drawableResource
 
+
+        //val newPokemonImage
+
+    }
+    fun Context1.getResource(name:String): Int? {
+        val resID = this.resources.getIdentifier(name , "drawable", this.packageName)
+        return resID
     }
 
 
