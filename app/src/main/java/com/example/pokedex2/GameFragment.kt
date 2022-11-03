@@ -64,9 +64,10 @@ class GameFragment : Fragment() {
         btn2.text = pokemon2
         btn3.text = pokemon3
         btn4.text = pokemon4
-        correctPokemon = getCorrectPokemon()
+        correctPokemon = getCorrectPokemons()
         val resourceId = resources.getIdentifier(correctPokemon+imageSil, "drawable", BuildConfig.APPLICATION_ID)
         pokemonImage.setImageResource(resourceId)
+
         btn1.setOnClickListener{viewModel.isUserCorrect(btn1.text as String)}
         btn2.setOnClickListener{viewModel.isUserCorrect(btn2.text as String)}
         btn3.setOnClickListener{viewModel.isUserCorrect(btn3.text as String)}
@@ -94,7 +95,7 @@ class GameFragment : Fragment() {
         pokemon3 = getNextPokemon()
         pokemon4 = getNextPokemon()
     }
-    private fun getCorrectPokemon(): String{
+    private fun getCorrectPokemons(): String{
         val rand = (1..4).random()
         var correct = "test"
         val drawableResource  = when (rand) {
