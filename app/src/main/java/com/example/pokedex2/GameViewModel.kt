@@ -12,6 +12,10 @@ import com.example.pokedex2.ui.game.allPokemonList
 class GameViewModel : ViewModel() {
     private var pokemonList: MutableList<String> = mutableListOf()
     lateinit var currentPokemon: String
+    lateinit var pokemon1: String
+    lateinit var pokemon2: String
+    lateinit var pokemon3: String
+    lateinit var pokemon4: String
     private val _score = MutableLiveData(0)
     val score: LiveData<Int>
         get() = _score
@@ -47,9 +51,10 @@ class GameViewModel : ViewModel() {
     }
     private fun increaseScore() {
         _score.value = (_score.value)?.plus(SCORE_INCREASE)
+
     }
-    fun isUserWordCorrect(playerWord: String): Boolean {
-        if (playerWord.equals(currentPokemon, true)) {
+    fun isUserCorrect(playerChoice: String): Boolean {
+        if (playerChoice.equals(currentPokemon, true)) {
             increaseScore()
             return true
         }

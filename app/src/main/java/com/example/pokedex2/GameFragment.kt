@@ -33,6 +33,9 @@ class GameFragment : Fragment() {
 
 
 
+
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -64,6 +67,10 @@ class GameFragment : Fragment() {
         correctPokemon = getCorrectPokemon()
         val resourceId = resources.getIdentifier(correctPokemon+imageSil, "drawable", BuildConfig.APPLICATION_ID)
         pokemonImage.setImageResource(resourceId)
+        btn1.setOnClickListener{viewModel.isUserCorrect(btn1.text as String)}
+        btn2.setOnClickListener{viewModel.isUserCorrect(btn2.text as String)}
+        btn3.setOnClickListener{viewModel.isUserCorrect(btn3.text as String)}
+        btn4.setOnClickListener{viewModel.isUserCorrect(btn4.text as String)}
 
 
 
