@@ -11,15 +11,30 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.pokedex2.databinding.FragmentGameBinding
+import com.example.pokedex2.ui.game.MAX_NO_OF_POKEMON
 import com.example.pokedex2.ui.game.allPokemonList
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import java.lang.System.exit
 import android.content.Context as Context1
 
 class GameFragment : Fragment() {
+    private fun showFinalScoreDialog(imageId: ImageView) {
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle(getString(R.string.congratulations))
+            .setMessage(getString(R.string.you_scored, viewModel.score.value))
+            .setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ ->
+                exitGame()
+            }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ ->
+                restartGame(imageId)
+            }.show()
+    }
 
-    private var binding: FragmentGameBinding? = null
+
     private val viewModel: GameViewModel by viewModels()
     private var score = 0
-    private var currentWordCount = 0
+    private var currentPokemonCount = 0
     private var currentPokemon = "test"
     private var pokemon1 = "test"
     private var pokemon2 = "test"
@@ -28,101 +43,81 @@ class GameFragment : Fragment() {
     private var correctPokemon = "nothing"
     private var imageSil = "_silpic"
     private var resource = "R.id."
+    private var resourceID = 0
+    private var pokemonImage = 0
 
 
-
-
-
-
+    // Binding object instance with access to the views in the game_fragment.xml layout
+    private lateinit var binding: FragmentGameBinding
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        val fragmentBinding = FragmentGameBinding.inflate(inflater, container, false)
-        binding = fragmentBinding
-        Log.d("GameFragment", "Word: ${viewModel.currentPokemon} " +
-                "Score: ${viewModel.score} WordCount: ${viewModel.currentPokemon}")
-        return fragmentBinding.root
+    ): View {
+        // Inflate the layout XML file and return a binding object instance
+        binding = FragmentGameBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
-            backToMain.setOnClickListener { goToStart() }
-        }
-        val btn1 = view.findViewById<Button>(R.id.option1)
-        val btn2 = view.findViewById<Button>(R.id.option2)
-        val btn3 = view.findViewById<Button>(R.id.option3)
-        val btn4 = view.findViewById<Button>(R.id.option4)
+
         val pokemonImage : ImageView = view.findViewById(R.id.pokemonSil)
+        //binding.option1.setOnClickListener(updateNextPokemon())
+        updateNextPokemon()
+        getImageID(pokemonImage)
 
 
-        getPokemonForRound()
-        btn1.text = pokemon1
-        btn2.text = pokemon2
-        btn3.text = pokemon3
-        btn4.text = pokemon4
-        correctPokemon = getCorrectPokemons()
-        val resourceId = resources.getIdentifier(correctPokemon+imageSil, "drawable", BuildConfig.APPLICATION_ID)
-        pokemonImage.setImageResource(resourceId)
+        binding.option1.setOnClickListener{onSubmitPokemon(viewModel.pokemon1.value.toString(), pokemonImage)}
+        binding.option2.setOnClickListener{onSubmitPokemon(viewModel.pokemon2.value.toString(), pokemonImage)}
+        binding.option3.setOnClickListener{onSubmitPokemon(viewModel.pokemon3.value.toString(), pokemonImage)}
+        binding.option4.setOnClickListener{onSubmitPokemon(viewModel.pokemon4.value.toString(), pokemonImage)}
 
-        btn1.setOnClickListener{viewModel.isUserCorrect(btn1.text as String)}
-        btn2.setOnClickListener{viewModel.isUserCorrect(btn2.text as String)}
-        btn3.setOnClickListener{viewModel.isUserCorrect(btn3.text as String)}
-        btn4.setOnClickListener{viewModel.isUserCorrect(btn4.text as String)}
-
-
-
+        // Setup a click listener for the Submit and Skip buttons.
+        viewModel.score.observe(viewLifecycleOwner, { newScore -> binding.score.text = getString(R.string.score, newScore) })
+        viewModel.currentPokemonCount.observe(viewLifecycleOwner,
+            { newWordCount -> binding.count.text = getString(R.string.word_count, newWordCount, MAX_NO_OF_POKEMON) })
 
     }
-    fun goToStart(){
-        findNavController().navigate(R.id.action_gameFragment_to_startFragment2)
-    }
 
 
-    /**
-     * Start an order with the desired quantity of cupcakes and navigate to the next screen.
-     */
-    private fun getNextPokemon(): String {
-        val tempWord = allPokemonList.random().toCharArray()
-        return String(tempWord)
-    }
-    private fun getPokemonForRound(){
-        pokemon1 = getNextPokemon()
-        pokemon2 = getNextPokemon()
-        pokemon3 = getNextPokemon()
-        pokemon4 = getNextPokemon()
-    }
-    private fun getCorrectPokemons(): String{
-        val rand = (1..4).random()
-        var correct = "test"
-        val drawableResource  = when (rand) {
-            1 -> pokemon1
-            2 -> pokemon2
-            3 -> pokemon3
-            else -> pokemon4
+    private fun onSubmitPokemon(btnText: String, imageId: ImageView) {
+        val playerWord = btnText
+        if (viewModel.isUserCorrect(playerWord).equals(true)){
+            updateNextPokemon()
+            getImageID(imageId)
         }
-        Log.d("GameFragment",(correct))
-        return  drawableResource
-
-
-        //val newPokemonImage
+        else{
+            showFinalScoreDialog(imageId)
+        }
 
     }
-    fun Context1.getResource(name:String): Int? {
-        val resID = this.resources.getIdentifier(name , "drawable", this.packageName)
-        return resID
+    private fun getImageID(imageId: ImageView){
+        val resourceId = resources.getIdentifier(viewModel.correctPokemon.value+imageSil, "drawable", BuildConfig.APPLICATION_ID)
+        setNewImage(imageId, resourceId)
+    }
+    private fun setNewImage(pokemonSil: ImageView, imageId: Int){
+        pokemonSil.setImageResource(imageId)
     }
 
 
-    /**
-     * This fragment lifecycle method is called when the view hierarchy associated with the fragment
-     * is being removed. As a result, clear out the binding object.
-     */
-    override fun onDestroyView() {
-        super.onDestroyView()
-        binding = null
+    private fun restartGame(imageId: ImageView) {
+        viewModel.reinitializeData()
+        updateNextPokemon()
+        getImageID(imageId)
+
+    }
+
+    private fun exitGame() {
+        activity?.finish()
+    }
+
+
+    private fun updateNextPokemon() {
+        binding.option1.text = viewModel.pokemon1.value
+        binding.option2.text = viewModel.pokemon2.value
+        binding.option3.text = viewModel.pokemon3.value
+        binding.option4.text = viewModel.pokemon4.value
     }
 }
