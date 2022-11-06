@@ -30,11 +30,17 @@ class StartFragment : Fragment() {
         binding?.apply {
             startGame.setOnClickListener { startGame() }
         }
+        binding?.apply{
+            homePage.setOnClickListener { goHome() }
+        }
 
 
     }
     fun startGame() {
         findNavController().navigate(R.id.action_startFragment_to_gameFragment2)
+    }
+    fun goHome(){
+        findNavController().navigate(R.id.action_startFragment_to_endFragment)
     }
 
     /**

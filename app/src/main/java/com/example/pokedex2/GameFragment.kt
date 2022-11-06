@@ -24,7 +24,7 @@ class GameFragment : Fragment() {
             .setMessage(getString(R.string.you_scored, viewModel.score.value))
             .setCancelable(false)
             .setNegativeButton(getString(R.string.exit)) { _, _ ->
-                exitGame()
+                backToStart()
             }
             .setPositiveButton(getString(R.string.play_again)) { _, _ ->
                 restartGame(imageId)
@@ -64,6 +64,7 @@ class GameFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val pokemonImage : ImageView = view.findViewById(R.id.pokemonSil)
+        binding?.apply { backToMain.setOnClickListener { backToStart() } }
         //binding.option1.setOnClickListener(updateNextPokemon())
         updateNextPokemon()
         getImageID(pokemonImage)
@@ -107,6 +108,9 @@ class GameFragment : Fragment() {
         updateNextPokemon()
         getImageID(imageId)
 
+    }
+    fun backToStart(){
+        findNavController().navigate(R.id.action_gameFragment_to_startFragment2)
     }
 
     private fun exitGame() {
