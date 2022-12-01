@@ -53,7 +53,7 @@ class GameViewModel : ViewModel() {
         _pokemon3.value = String(allPokemonList.random().toCharArray())
         _pokemon4.value = String(allPokemonList.random().toCharArray())
         var pokemonArray = arrayOf(pokemon1, pokemon2, pokemon3, pokemon4)
-        if(hasDuplicates(pokemonArray).equals(true)){
+        while(hasDuplicates(pokemonArray).equals(true)){
             getPokemonForRound()
         }
         _correctPokemon.value = getCorrectPokemon()
