@@ -6,10 +6,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
+import com.example.pokedex2.adapter.ItemAdapter
+import com.example.pokedex2.data.Datasource
 import com.example.pokedex2.databinding.FragmentListBinding
 
 class ListFragment : Fragment(){
     private var binding: FragmentListBinding? = null
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
