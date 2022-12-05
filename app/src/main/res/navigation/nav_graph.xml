@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_startFragment_to_endFragment"
             app:destination="@id/endFragment" />
+        <action
+            android:id="@+id/action_startFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -61,6 +64,17 @@
             app:destination="@id/endFragment" />
         <action
             android:id="@+id/action_scoreboardFragment_to_gameFragment"
+            app:destination="@id/gameFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addScoreFragment"
+        android:name="com.example.pokedex2.AddScoreFragment"
+        android:label="AddScoreFragment" >
+        <action
+            android:id="@+id/action_addScoreFragment_to_scoreboardFragment"
+            app:destination="@id/scoreboardFragment" />
+        <action
+            android:id="@+id/action_addScoreFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
     </fragment>
 </navigation>

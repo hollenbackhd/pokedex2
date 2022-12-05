@@ -9,6 +9,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/view_scores"
+            android:layout_width="145dp"
+            android:layout_height="50dp"
+            android:text="Scoreboard"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.959" />
+
         <ImageView
             android:id="@+id/pokemonSil3"
             android:layout_width="220dp"
@@ -23,15 +35,14 @@
 
         <Button
             android:id="@+id/start_game"
-            android:layout_width="154dp"
-            android:layout_height="82dp"
+            android:layout_width="141dp"
+            android:layout_height="71dp"
             android:text="start"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.913" />
+            app:layout_constraintVertical_bias="0.883" />
 
         <TextView
             android:id="@+id/guess3"
@@ -51,8 +62,8 @@
             android:layout_height="match_parent"
             android:scaleType="fitXY"
             app:srcCompat="@drawable/pokedex_pic"
-            tools:layout_editor_absoluteX="-89dp"
-            tools:layout_editor_absoluteY="-106dp" />
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
 
         <ImageView
             android:id="@+id/imageView"
