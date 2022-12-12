@@ -4,6 +4,7 @@
     package="com.example.pokedex2">
 
     <application
+        android:name="com.example.pokedex2.ScoreboardApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
