@@ -10,15 +10,16 @@
 
         <Button
             android:id="@+id/pokedex_list"
-            android:layout_width="153dp"
-            android:layout_height="82dp"
+            android:layout_width="215dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#386ABA"
             android:text="Pokedex Database"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.275" />
+            app:layout_constraintVertical_bias="0.925" />
 
         <ImageView
             android:id="@+id/border4"
@@ -27,43 +28,58 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/pokedex_pic"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="0dp" />
+            tools:layout_editor_absoluteY="-16dp" />
 
         <Button
             android:id="@+id/gotta_catch_them_all"
-            android:layout_width="153dp"
-            android:layout_height="82dp"
-            android:text="Gotta Catch Them All!"
+            android:layout_width="215dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#386AB9"
+            android:text="How to Play"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.844"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.55" />
+            app:layout_constraintVertical_bias="0.584" />
 
         <Button
             android:id="@+id/who_that_pokemon"
-            android:layout_width="153dp"
-            android:layout_height="82dp"
-            android:text="Who's that Pokemon?"
+            android:layout_width="215dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#386AB9"
+            android:text="Play game"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.844"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.275" />
+            app:layout_constraintVertical_bias="0.413" />
 
         <Button
             android:id="@+id/online"
-            android:layout_width="153dp"
-            android:layout_height="82dp"
-            android:text="This will go somewhere"
+            android:layout_width="215dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#386AB9"
+            android:text="Nintendo Pokemon"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.186"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.55" />
+            app:layout_constraintVertical_bias="0.755" />
+
+        <ImageView
+            android:id="@+id/homepage"
+            android:layout_width="332dp"
+            android:layout_height="171dp"
+            android:src="@drawable/whos_that_pokemon_split"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.62"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/border4"
+            app:layout_constraintVertical_bias="0.16" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
