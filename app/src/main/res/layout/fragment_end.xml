@@ -28,7 +28,43 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/pokedex_pic"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="-16dp" />
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/pokeball8"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.427" />
+
+        <ImageView
+            android:id="@+id/pokeball5"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.082"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.738" />
+
+        <ImageView
+            android:id="@+id/pokeball4"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58" />
 
         <Button
             android:id="@+id/gotta_catch_them_all"
@@ -71,15 +107,26 @@
 
         <ImageView
             android:id="@+id/homepage"
-            android:layout_width="332dp"
-            android:layout_height="171dp"
+            android:layout_width="305dp"
+            android:layout_height="156dp"
             android:src="@drawable/whos_that_pokemon_split"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.62"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/border4"
             app:layout_constraintVertical_bias="0.16" />
+
+        <ImageView
+            android:id="@+id/pokeball1"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.912"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.894" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

@@ -13,7 +13,11 @@
             android:id="@+id/view_scores"
             android:layout_width="145dp"
             android:layout_height="50dp"
+            android:backgroundTint="#FECB04"
             android:text="Scoreboard"
+            android:textColor="#386AB9"
+            android:textSize="15sp"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
@@ -30,31 +34,21 @@
             app:layout_constraintHorizontal_bias="0.23"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.346"
+            app:layout_constraintVertical_bias="0.422"
             app:srcCompat="@drawable/bulbasaur_silpic" />
 
         <Button
             android:id="@+id/start_game"
             android:layout_width="141dp"
             android:layout_height="71dp"
+            android:backgroundTint="#386ABA"
             android:text="start"
+            android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.883" />
-
-        <TextView
-            android:id="@+id/guess3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Who's that Pokemon?"
-            android:textSize="34sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.166" />
 
         <ImageView
             android:id="@+id/border3"
@@ -63,7 +57,19 @@
             android:scaleType="fitXY"
             app:srcCompat="@drawable/pokedex_pic"
             tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="16dp" />
+            tools:layout_editor_absoluteY="0dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.85"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.924" />
 
         <ImageView
             android:id="@+id/imageView"
@@ -81,6 +87,7 @@
             android:id="@+id/home_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="#386AB9"
             android:text="home"
             app:layout_constraintBottom_toBottomOf="@+id/border3"
             app:layout_constraintEnd_toEndOf="parent"
@@ -88,6 +95,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.023" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="309dp"
+            android:layout_height="132dp"
+            android:src="@drawable/whos_that_pokemon_split"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.156" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/pokeball_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.149"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.924" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
