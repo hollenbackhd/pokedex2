@@ -15,7 +15,11 @@
                 android:id="@+id/option1"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:backgroundTint="#386ABA"
                 android:text="bulbasaur"
+                android:textColor="#FDCA06"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.203"
@@ -27,7 +31,11 @@
                 android:id="@+id/option2"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:backgroundTint="#FECB04"
                 android:text="turtwig"
+                android:textColor="#396ABA"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.828"
@@ -44,14 +52,18 @@
                 app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.372"
+                app:layout_constraintVertical_bias="0.463"
                 app:srcCompat="@drawable/bulbasaur_silpic" />
 
             <Button
                 android:id="@+id/option3"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:backgroundTint="#FDCA06"
                 android:text="mudkip"
+                android:textColor="#386AB9"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.203"
@@ -59,23 +71,15 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.91" />
 
-            <TextView
-                android:id="@+id/guess"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Who's that Pokemon?"
-                android:textSize="34sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.151" />
-
             <Button
                 android:id="@+id/option4"
                 android:layout_width="150dp"
                 android:layout_height="80dp"
+                android:backgroundTint="#386AB9"
                 android:text="sobble"
+                android:textColor="#FDCA06"
+                android:textSize="16sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.831"
@@ -87,6 +91,7 @@
                 android:id="@+id/score"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.877"
@@ -109,9 +114,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1 of 10"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.147"
+                app:layout_constraintHorizontal_bias="0.138"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.119" />
@@ -120,6 +126,7 @@
                 android:id="@+id/back_to_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTint="#386AB8"
                 android:text="back"
                 app:layout_constraintBottom_toBottomOf="@+id/border"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -127,5 +134,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.023" />
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="251dp"
+                android:layout_height="122dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.17"
+                app:srcCompat="@drawable/whos_that_pokemon_split" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
