@@ -26,21 +26,10 @@ class AddScoreFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply {
-            skip.setOnClickListener { startGame() }
-        }
-        binding?.apply{
-            submit.setOnClickListener{ submitScore() }
-        }
 
 
 
-    }
-    fun startGame() {
-        findNavController().navigate(R.id.action_addScoreFragment_to_gameFragment)
-    }
-    fun submitScore(){
-        findNavController().navigate(R.id.action_addScoreFragment_to_scoreboardFragment)
+
     }
 
 

@@ -25,9 +25,7 @@ class EndFragment : Fragment() {
         binding?.apply {
             whoThatPokemon.setOnClickListener { goToStart() }
         }
-        binding?.apply {
-            pokedexList.setOnClickListener { goToList() }
-        }
+
         binding?.apply{
             howToPlay.setOnClickListener { goToHowTo() }
         }
@@ -37,9 +35,7 @@ class EndFragment : Fragment() {
     fun goToStart(){
         findNavController().navigate(R.id.action_endFragment_to_startFragment)
     }
-    fun goToList(){
-        findNavController().navigate(R.id.action_endFragment_to_listFragment)
-    }
+
     fun goToHowTo(){
         findNavController().navigate(R.id.action_endFragment_to_howToFragment)
     }

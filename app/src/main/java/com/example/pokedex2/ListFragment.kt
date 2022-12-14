@@ -26,16 +26,12 @@ class ListFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding?.apply{
-            listToHome.setOnClickListener { goHome() }
-        }
+
 
 
 
     }
-    fun goHome(){
-        findNavController().navigate(R.id.action_listFragment_to_endFragment)
-    }
+
 
     /**
      * Start an order with the desired quantity of cupcakes and navigate to the next screen.
