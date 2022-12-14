@@ -9,11 +9,11 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/pokedex_list"
+            android:id="@+id/notice"
             android:layout_width="215dp"
             android:layout_height="100dp"
             android:backgroundTint="#386ABA"
-            android:text="Pokedex Database"
+            android:text="Notice to Nintendo"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -93,11 +93,11 @@
             app:layout_constraintVertical_bias="0.413" />
 
         <Button
-            android:id="@+id/online"
+            android:id="@+id/online_pokedex"
             android:layout_width="215dp"
             android:layout_height="100dp"
             android:backgroundTint="#386AB9"
-            android:text="Nintendo Pokemon"
+            android:text="Online Pokedex"
             android:textSize="24sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

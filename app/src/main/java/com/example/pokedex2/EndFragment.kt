@@ -1,5 +1,7 @@
 package com.example.pokedex2
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -7,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.pokedex2.databinding.FragmentEndBinding
+
 
 class EndFragment : Fragment() {
     private var binding: FragmentEndBinding? = null
@@ -29,9 +32,21 @@ class EndFragment : Fragment() {
         binding?.apply{
             howToPlay.setOnClickListener { goToHowTo() }
         }
+        binding?.apply{
+            onlinePokedex.setOnClickListener { goOnline() }
+        }
 
 
     }
+    fun goOnline(){
+        goToUrl ( "https://www.pokemon.com/us/pokedex")
+    }
+    private fun goToUrl(url: String) {
+        val uriUrl = Uri.parse(url)
+        val launchBrowser = Intent(Intent.ACTION_VIEW, uriUrl)
+        startActivity(launchBrowser)
+    }
+
     fun goToStart(){
         findNavController().navigate(R.id.action_endFragment_to_startFragment)
     }
