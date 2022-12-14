@@ -35,6 +35,9 @@ class EndFragment : Fragment() {
         binding?.apply{
             onlinePokedex.setOnClickListener { goOnline() }
         }
+        binding?.apply {
+            notice.setOnClickListener { goToNotice() }
+        }
 
 
     }
@@ -49,6 +52,9 @@ class EndFragment : Fragment() {
 
     fun goToStart(){
         findNavController().navigate(R.id.action_endFragment_to_startFragment)
+    }
+    fun goToNotice(){
+        findNavController().navigate(R.id.action_endFragment_to_noticeFragment)
     }
 
     fun goToHowTo(){
