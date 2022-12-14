@@ -106,8 +106,8 @@
                 android:layout_height="match_parent"
                 android:scaleType="fitXY"
                 app:srcCompat="@drawable/pokedex_pic"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="-79dp" />
+                tools:layout_editor_absoluteX="174dp"
+                tools:layout_editor_absoluteY="195dp" />
 
             <TextView
                 android:id="@+id/count"

@@ -67,7 +67,7 @@
             app:layout_constraintVertical_bias="0.58" />
 
         <Button
-            android:id="@+id/gotta_catch_them_all"
+            android:id="@+id/how_to_play"
             android:layout_width="215dp"
             android:layout_height="100dp"
             android:backgroundTint="#386AB9"
